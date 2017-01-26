@@ -1,0 +1,36 @@
+﻿@model NewClassrooms.Models.InputData
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>New Classrooms Software Developer Trial Project</title>
+
+    <link rel="stylesheet" href="~/Content/Site.css" />
+</head>
+<body>
+    <h2>New Classrooms Software Developer Trial Project</h2>
+    <section> 
+        @using (Html.BeginForm("Index", "Home", FormMethod.Post, new { @id = "form" }))
+        {
+            <div>@Html.TextAreaFor(model => model.JsonInput, 20, 80, new { })</div>
+            <div>@Html.TextBoxFor(model => model.UriInput)</div>
+            <div>@Html.DropDownListFor(model => model.FileFormat, Model.FileFormats, "-- SELECT FILE FORMAT --")</div>
+
+            <div id="buttons">
+                <input type="submit" id="btnSubmit" value="submit" class="button" />
+                <input type="submit" id="btnClear" value="clear" class="button" />
+            </div>
+        }
+    </section>
+
+    <section>
+        @Html.Raw(ViewBag.Response)
+    </section>
+</body>
+</html>

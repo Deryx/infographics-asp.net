@@ -1,0 +1,55 @@
+﻿body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+h2 {
+    text-align: center;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    text-transform: uppercase;
+}
+
+section {
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    width: 100%;
+}
+
+p {
+    clear: both;
+}
+
+#form {
+    margin: 0 auto;
+    padding: 0;
+    width: 700px;
+    text-align: center;
+}
+
+#form textarea {
+    overflow-x: hidden;
+    overflow-y: scroll;
+    margin: 20px;
+}
+
+#form input {
+    margin: 10px;
+}
+
+#form select {
+    text-align: center;
+}
+
+#buttons {
+    margin: 0 auto;
+    padding: 0;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+}
+
+.button {
+    margin: 10px;
+}
